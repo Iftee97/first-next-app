@@ -29,3 +29,6 @@ const Ninjas = ({ ninjas }) => {
 }
 
 export default Ninjas
+
+// getStaticProps -- SSG
+// getServerSideProps -- SSR
