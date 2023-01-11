@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
-const Home = () => {
+export default function Home() {
   return (
     <>
       <Head>
@@ -20,5 +20,3 @@ const Home = () => {
     </>
   )
 }
-
-export default Home

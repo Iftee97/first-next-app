@@ -1,19 +1,7 @@
 import Link from 'next/link'
 import styles from '../../styles/Ninjas.module.css'
 
-export const getStaticProps = async () => {
-  // this function runs at build time -- in the server, before it goes to the browser
-  const res = await fetch('https://jsonplaceholder.typicode.com/users')
-  const data = await res.json()
-
-  return {
-    props: {
-      ninjas: data
-    }
-  }
-}
-
-const Ninjas = ({ ninjas }) => {
+export default function Ninjas({ ninjas }) {
   return (
     <div>
       <h1>All Ninjas</h1>
@@ -28,7 +16,16 @@ const Ninjas = ({ ninjas }) => {
   )
 }
 
-export default Ninjas
+export async function getStaticProps() {
+  const res = await fetch('https://jsonplaceholder.typicode.com/users')
+  const data = await res.json()
+
+  return {
+    props: {
+      ninjas: data
+    }
+  }
+}
 
 // getStaticProps -- SSG
 // getServerSideProps -- SSR
