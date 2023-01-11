@@ -1,9 +1,9 @@
-const Footer = () => {
+export default function Footer() {
+  let date = new Date().getFullYear()
+
   return (
     <footer>
-      <p>Copyright 2022 - Iftee27</p>
+      <p>Copyright {date} - Iftee27</p>
     </footer>
   )
 }
-
-export default Footer

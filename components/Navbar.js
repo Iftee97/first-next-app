@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-const Navbar = () => {
+export default function Navbar() {
   return (
     <nav>
       <div className="logo">
@@ -13,5 +13,3 @@ const Navbar = () => {
     </nav>
   )
 }
-
-export default Navbar
