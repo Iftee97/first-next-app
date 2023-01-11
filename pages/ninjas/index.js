@@ -27,5 +27,5 @@ export async function getStaticProps() {
   }
 }
 
-// getStaticProps -- SSG
 // getServerSideProps -- SSR
+// getStaticProps -- SSG

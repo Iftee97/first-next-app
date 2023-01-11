@@ -37,3 +37,6 @@ export const getStaticProps = async (context) => {
     }
   }
 }
+
+// getServerSideProps -- SSR
+// getStaticProps -- SSG
