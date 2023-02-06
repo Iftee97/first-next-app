@@ -11,10 +11,9 @@ export default function Details({ ninja }) {
 
 export async function getStaticPaths() {
   const res = await fetch('https://jsonplaceholder.typicode.com/users')
-  const data = await res.json()
-  // console.log('data:', data) // returns users
+  const data = await res.json() // returns users
 
-  const paths = data.map(user => ({
+  const paths = data.map((user) => ({
     params: {
       id: user.id.toString()
     }
@@ -40,3 +39,4 @@ export async function getStaticProps(context) {
 
 // getServerSideProps -- SSR
 // getStaticProps -- SSG
+// getStaticPaths -- generate all dynamic paths
